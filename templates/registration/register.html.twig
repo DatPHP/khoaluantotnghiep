@@ -1,0 +1,216 @@
+
+{# templates/registration/register.html.twig #}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="Favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title>Laravel</title>
+</head>
+<body>
+
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+    body{
+        margin: 0;
+        font-size: .9rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #212529;
+        text-align: left;
+        background-color: #f5f8fa;
+    }
+
+    .navbar-laravel
+    {
+        box-shadow: 0 2px 4px rgba(0,0,0,.04);
+    }
+
+    .navbar-brand , .nav-link, .my-form, .login-form
+    {
+        font-family: Raleway, sans-serif;
+    }
+
+    .my-form
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .my-form .row
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .login-form
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .login-form .row
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    input
+    {
+
+        font-size: 10px;
+
+    }
+
+    #form_firstName { display: flex; justify-content: space-between;font-size: 15px; }
+    #form_lastName { display: flex; justify-content: space-between;font-size: 15px; }
+    #form_username { display: flex; justify-content: space-between;font-size: 15px; }
+    #form_email { display: flex; justify-content: space-between; font-size: 15px;}
+    #form_phone { display: flex; justify-content: space-between; font-size: 15px;}
+    #form_password { display: flex; justify-content: space-between;font-size: 15px; }
+    #form_address { display: flex; justify-content: space-between; font-size: 15px;}
+    #form_plainPassword { display: flex; justify-content: space-between; font-size: 15px;}
+
+
+
+
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+    <div class="container">
+        <a class="navbar-brand" href="http://localhost:8000">Dat Shop </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8000/login"><b>Login </b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><b>Register </b></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<main class="login-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+
+
+
+                        {% if error is not empty %}
+                            <div>{{ error }} </div>
+                        {% endif %}
+                        {{ form_start(form) }}
+
+                        <div class="form-group row">
+
+                            <div class="row">
+
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.firstName) }}
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form_row(form.email) }}
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.lastName) }}
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.phone) }}
+
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.username) }}
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.password) }}
+                                </div>
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.address ) }}
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    {{ form_row(form.plainPassword) }}
+                                </div>
+
+                                <label><input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</label>
+                            </div>
+
+                            {{ form_end(form) }}
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

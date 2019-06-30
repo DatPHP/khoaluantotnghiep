@@ -1,0 +1,444 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Detail</title>
+
+    <title>Home</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!------ Include the above in your HEAD tag ---------->
+
+
+    <!----------bootstarp cua footer-------------------------->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--------------------end bootstrapt----------------->
+
+
+    <!----------bootstarp cua navbar-------------------------->
+
+    <!----------bootstarp cua footer-------------------------->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--------------------end bootstrapt----------------->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!--------------------end bootstrapt nabar----------------->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+
+</head>
+
+
+
+<body>
+<!-- page-header -->
+
+<!-- page-header -->
+<div class="page-header-shop">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+
+
+                <div class="page-caption">
+
+                    {% if customer is empty %}
+                        <div class="loginbutton " id="login">
+
+                            <a href="http://localhost:8000/login" class="btn btn-info btn-lg">
+                                <span class="glyphicon glyphicon-home" ></span> Login
+                            </a>
+                            {# <button type="button" class="btn btn-default  "><a href="http://localhost:8000/login">Login</a> </button> #}
+                        </div>
+                    {% else %}
+                        <div  id="users">
+
+                            <div class="dropdown">
+                                <span > <h5> Hello <b> {{ customer.last_name }} {{ customer.first_name }}</b></h5> </span>
+                                <!--- <span > <i class="fa fa-navicon" style="font-size:30px " aria-hidden="true"> </i> </span>--->
+                                <div class="dropdown-content">
+
+                                    <a href="http://localhost:8000/Customer01/{{ user.id }}" class="btn btn btn-primary">Information </a>
+
+                                    <button id="logout" class="btn btn btn-primary">Logout</button>
+
+                                    {% if user.role == 'admin' %}
+                                        <button id="dash-board" class="btn btn btn-primary"> Dashboard </button>
+
+                                    {% endif %}
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="logo"><a href="http://localhost:8000/">
+
+                            <img  src="{{asset('build/images/datshop')}}.png"  style="text-align:center; width: 80%;height:40%;padding-left: 45%"/>
+                            <!---  <img  src="http://localhost/list/datshop.png" alt="" style="width: 900px;height:300%;padding-left: 230px"/> ------>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- /.page-header-->
+
+<div class="container">
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Man
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="http://localhost:8000/product/man/1">Shirt</a>
+                        <a class="dropdown-item" href="http://localhost:8000/product/man/2">Jean</a>
+                        <a class="dropdown-item" href="http://localhost:8000/product/man/3">Accessories</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Woman
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="http://localhost:8000/product/women/1">Shirt</a>
+                        <a class="dropdown-item" href="http://localhost:8000/product/women/2">Jean</a>
+                        <a class="dropdown-item" href="http://localhost:8000/product/women/3">Accessories</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kid
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="http://localhost:8000/product/kids/1">Shirt</a>
+                        <a class="dropdown-item" href="http://localhost:8000/product/kids/2">Jean</a>
+                        <a class="dropdown-item" href="http://localhost:8000/product/kids/3">Accessories</a>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+
+    </nav>
+
+
+</div>
+
+<!------------------------------------------content ---------------------------------------->
+<div class="container">
+
+
+
+    <main role="main" class="container main">
+        {% include 'flash_messages.html.twig' %}
+
+        {% block body %}{% endblock %}
+    </main>
+    <h2 class="text-center">Contact</h2>
+
+
+
+
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+        <div class="col-md-7">
+
+            <h1 class="section-title">Love to Hear From You</h1>
+
+                <p>My website is new and very much in need of comments, comments and comments from customers. All comments and feedback on policies, product warranty, website errors, product errors .... they are very valuable to me.</p>
+
+                <div class="find-widget">
+                    Company:  <a href="https://hostriver.ro">Dat Shop </a>
+                </div>
+                <div class="find-widget">
+                    Email: <a href="#">nguyenvandat170296@gmail.com</a>
+                </div>
+                <div class="find-widget">
+                    Phone:  <a href="#">+ 32 8089939</a>
+                </div>
+
+                <div class="find-widget">
+                    Website:  <a href="https://uny.ro">www.datshop.ik</a>
+                </div>
+                <div class="find-widget">
+                    Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+                </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="col-md-5">
+
+
+            {{ form_start(form) }}
+
+            {{ form_row(form.name) }}
+
+            {{ form_row(form.email) }}
+
+
+            {{ form_row(form.request) }}
+
+
+
+            {{ form_row(form.send, { 'label': 'Send Request' }) }}
+
+
+            {{ form_end(form) }}
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+     <br>
+     <br>
+
+
+
+
+
+
+
+
+                   <!---- <button type="submit" class="btn main-btn pull-right">Send a message</button>------>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<style>
+
+    /*footer*/
+    .col_white_amrc { color:#FFF;}
+    footer { width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;}
+    .pt2 { padding-top:40px ; margin-bottom:20px ;}
+    footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+    .mb10 { padding-bottom:15px ;}
+    .footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+    .footer_ul_amrc li {padding:0px 0px 5px 0px;}
+    .footer_ul_amrc li a{ color:#CCC;}
+    .footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+    .fleft { float:left;}
+    .padding-right { padding-right:10px; }
+
+    .footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+    .footer_ul2_amrc li p { display:table; }
+    .footer_ul2_amrc li a:hover { text-decoration:none;}
+    .footer_ul2_amrc li i { margin-top:5px;}
+
+    .bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+    .foote_bottom_ul_amrc {
+        list-style-type:none;
+        padding:0px;
+        display:table;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-bottom: 10px;
+        margin-left: auto;
+    }
+    .foote_bottom_ul_amrc li { display:inline;}
+    .foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+    .social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+    .social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+    .social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+    .social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+
+    #form_name { display: flex; justify-content: space-between; }
+    #form_email { display: flex; justify-content: space-between; }
+    #form_request { display: flex; justify-content: space-between; }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!--footer starts from here-->
+<footer class="footer"  >
+
+    <div>
+
+
+
+
+    </div>
+
+    <div class="container bottom_border" >
+        <div class="row">
+            <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                <!--headin5_amrc-->
+                <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <p><i class="fa fa-location-arrow"></i> 125 Ung Van Khiem street,Binh Thanh Province, HCM city </p>
+                <p><i class="fa fa-phone"></i>  0328089939  </p>
+                <p><i class="fa fa fa-envelope"></i> nguyenvandat170296@gmail.com  </p>
+
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                    <li><a href="http://webenlance.com">Image Rectoucing</a></li>
+                    <li><a href="http://webenlance.com">Clipping Path</a></li>
+                    <li><a href="http://webenlance.com">Hollow Man Montage</a></li>
+                    <li><a href="http://webenlance.com">Ebay & Amazon</a></li>
+                    <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+                    <li><a href="http://webenlance.com">Image Cropping</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                    <li><a href="http://webenlance.com">Remove Background</a></li>
+                    <li><a href="http://webenlance.com">Shadows & Mirror Reflection</a></li>
+                    <li><a href="http://webenlance.com">Logo Design</a></li>
+                    <li><a href="http://webenlance.com">Vectorization</a></li>
+                    <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+                    <li><a href="http://webenlance.com">Image Cropping</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                <!--headin5_amrc ends here-->
+
+                <ul class="footer_ul2_amrc">
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                </ul>
+                <!--footer_ul2_amrc ends here-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+            <li><a href="http://webenlance.com">Home</a></li>
+            <li><a href="http://webenlance.com">About</a></li>
+            <li><a href="http://webenlance.com">Services</a></li>
+            <li><a href="http://webenlance.com">Pricing</a></li>
+            <li><a href="http://webenlance.com">Blog</a></li>
+            <li><a href="http://webenlance.com">Contact</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center">Copyright @2019 | Designed With by <a href="#">Nguyen Van Dat</a></p>
+
+        <ul class="social_footer_ul">
+            <li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <!--social_footer_ul ends here-->
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+
+
+
+
+
