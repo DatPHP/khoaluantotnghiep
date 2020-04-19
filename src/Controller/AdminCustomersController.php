@@ -22,7 +22,7 @@ use Doctrine\ORM\EntityManager;
 
 // Include paginator interface
 use Knp\Component\Pager\PaginatorInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 
 use phpDocumentor\Reflection\DocBlock\Tags\Uses;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -43,7 +43,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 
 
-class AdminCustomersController extends Controller
+class AdminCustomersController extends AbstractController
 {
     /**
      * @Route("/admin/customers", name="admin/customers")

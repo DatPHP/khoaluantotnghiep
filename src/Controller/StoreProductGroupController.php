@@ -21,14 +21,15 @@ use App\Entity\ProductType;
 use App\Entity\Customers;
 use App\Entity\Users;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 use App\Entity\Task;
 
 // Include paginator interface
-use Knp\Component\Pager\PaginatorInterface;
+
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -39,7 +40,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 
 
-class StoreProductGroupController extends Controller
+class StoreProductGroupController extends AbstractController
 {
 
 
@@ -47,7 +48,7 @@ class StoreProductGroupController extends Controller
      * @Route("/product/{gender}/{type_id}", name="product_productgroup")
      */
 
-    public function productgroup(Request $request,$gender, $type_id)
+    public function productgroup(Request $request,$gender, $type_id, PaginatorInterface $paginator)
     {
 
 
@@ -65,7 +66,6 @@ class StoreProductGroupController extends Controller
 
 
         /* @var $paginator \Knp\Component\Pager\Paginator */
-        $paginator  = $this->get('knp_paginator');
 
         // Paginate the results of the query
         $appointments = $paginator->paginate(

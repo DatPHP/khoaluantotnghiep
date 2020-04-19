@@ -13,7 +13,7 @@ namespace App\Controller;
 
 // ...
 use App\Entity\Products;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -30,7 +30,7 @@ use Symfony\Component\Validator\Mapping\Loader\AbstractLoader;
 
 
 
-class StoreShoppingCartController extends Controller
+class StoreShoppingCartController extends AbstractController
 {
 
     /**

@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,26 +13,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <title>Home</title>
-
     <style type="text/css">
 
         h1
         {
             font-size: 70px;
             color:#009999;
-
         }
 
         div.container {
             width: 1600px;
-
-
         }
 
 
@@ -55,39 +43,26 @@
             border: 1px solid gray;
             padding: 15px;
             overflow: hidden;
-
         }
-
-
-
-
-
         .navbar-brand
         {
-
             font-size: 28px;
         }
 
         nav {
-
             max-width: 1600px;
             margin-left: 45px;
             padding: 1em;
             float:left;
             font-size:25px ;
-
         }
 
         nav ul {
             list-style-type: none;
-
         }
 
         nav ul a {
             text-decoration: none;
-
-
-
         }
 
         nav ul li
@@ -150,20 +125,11 @@
         <div class="buttom-top">
         <button type="button" class="btn btn-primary btn-lg"> Log out </button>
         </div>
-
   <div class="top">
-
         <h1><b>CLOTHER SHOP</b></h1>
-
-
       <a href="#" class="fa fa-cart-plus boot" style="font-size:48px;color:black;"> </a>
-
         {{ "now"|date("m/d/Y") }}
-
   </div>
-
-
-
     </header>
 
 
@@ -220,22 +186,6 @@
                 </ul>
             </div>
             <ul >
-
-                <!-----------------------------------------------
-                <li class="nav-item">
-
-                    <form class="navbar-form navbar-left" action="/action_page.php">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search" name="search">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                </li> ------------------------------>
             </ul>
         </ul>
     </nav>
@@ -249,9 +199,6 @@
 
             <img src="..." alt="..." class="rounded">
         </div>
-
-
-
 <div>
 
         {% for i in range(low=0, high=7, step=1) %}
@@ -259,25 +206,16 @@
 
                 <div class="left"> <a href="http://localhost:8000/product/{{ i }}" >
                         <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
-
                     <p>  {{  product[i].name }} </p> <br>
                     <p> {{  product[i].price  }} vnd  </p><br>
-
-
                 <div class="card">
-
                     <div class="card bg-info text-white ">
                         <div class="card-body nut">Add Product</div>
-
                     </div>
                 </div>
-
             </a>
                 </div>
-
             </div>
-
-
         {% endfor %}
 </div>
 
@@ -307,17 +245,7 @@
                     </li>
                 </ul>
             </div>
-
         </footer>
-
-
-
-
-
 </div>
-
-
-
-
 </body>
 </html>

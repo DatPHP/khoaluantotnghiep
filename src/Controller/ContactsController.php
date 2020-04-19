@@ -5,7 +5,7 @@ use App\Entity\Contact;
 use App\Entity\Customers;
 use App\Entity\Users;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,11 +22,11 @@ use Symfony\Component\HttpFoundation\Request;
 // send email
 use App\Form\ContactType;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 
-class ContactsController extends Controller
+
+class ContactsController extends AbstractController
 {
     /**
      * @Route("/contacts", name="contacts")

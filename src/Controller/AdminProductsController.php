@@ -38,7 +38,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 
 use Symfony\Component\Form\Forms;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
@@ -47,7 +47,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 
-class AdminProductsController  extends Controller
+class AdminProductsController  extends AbstractController
 {
     /**
      * @Route("/admin/products", name="admin/products")

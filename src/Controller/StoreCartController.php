@@ -17,7 +17,7 @@ use App\Entity\Orders;
 use App\Entity\Users;
 use App\Entity\OrdersItems;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,7 +41,7 @@ use Dompdf\Dompdf;
 use Dompdf\Options;
 
 
-class StoreCartController extends Controller
+class StoreCartController extends AbstractController
 {
     /**
      * @Route("/cart/form", name="product_showcart")

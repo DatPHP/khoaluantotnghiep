@@ -15,7 +15,6 @@ use Knp\Component\Pager\PaginatorInterface;
 
 use App\Entity\Users;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 use Symfony\Component\HttpFoundation\Session\Session;

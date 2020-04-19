@@ -16,7 +16,7 @@ use App\Entity\Products;
 use App\Entity\Customers;
 
 use App\Entity\Users;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,7 +33,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Validator\Mapping\Loader\AbstractLoader;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class CustomerEditController extends Controller
+class CustomerEditController extends AbstractController
 {
     /**
      * @Route("/EditInfo/{id}", name="EditInfo_editCustomer")

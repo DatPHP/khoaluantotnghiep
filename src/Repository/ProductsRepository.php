@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\ProductList;
 use App\Entity\Products;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Common\Persistence\ManagerRegistry;
 use phpDocumentor\Reflection\DocBlock\Tags\Reference\Reference;
 use Doctrine\ORM\Query\Expr\Join;
 
@@ -18,7 +18,7 @@ use Doctrine\ORM\Query\Expr\Join;
  */
 class ProductsRepository extends ServiceEntityRepository
 {
-    public function __construct(RegistryInterface $registry)
+    public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Products::class);
     }

@@ -16,7 +16,7 @@ use App\Entity\Products;
 use App\Entity\Customers;
 use App\Entity\Users;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -30,7 +30,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 
 
-class StoreProductDetailController extends Controller
+class StoreProductDetailController extends AbstractController
 {
     /**
      * @Route("/product/{id}", name="product_productDetail")

@@ -15,7 +15,7 @@ use App\Entity\Products;
 use App\Entity\Customers;
 use App\Entity\Orders;
 use App\Entity\Users;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Task;
@@ -31,7 +31,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Validator\Mapping\Loader\AbstractLoader;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class InforCustomerController extends Controller
+class InforCustomerController extends AbstractController
 {
 
 

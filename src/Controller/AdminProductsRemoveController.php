@@ -15,7 +15,7 @@ namespace App\Controller;
 use App\Entity\Products;
 use App\Entity\Customers;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -31,7 +31,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 
 
-class AdminProductsRemoveController extends Controller
+class AdminProductsRemoveController extends AbstractController
 {
     /**
      * @Route("/remove/{id}", name="product_deleteProduct")

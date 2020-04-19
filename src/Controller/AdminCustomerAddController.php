@@ -18,7 +18,7 @@ use App\Entity\Customers;
 
 use phpDocumentor\Reflection\DocBlock\Tags\Uses;
 use function PHPSTORM_META\type;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Task;
@@ -38,7 +38,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 
 
-class AdminCustomerAddController extends Controller
+class AdminCustomerAddController extends AbstractController
 {
     /**
      * @Route("/customerAdd", name="customerAdd_addCustomer")

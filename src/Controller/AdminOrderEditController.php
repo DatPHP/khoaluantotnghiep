@@ -7,7 +7,7 @@
         use App\Entity\Customers;
         use App\Entity\Users;
 
-        use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
         use Symfony\Component\Routing\Annotation\Route;
         use Symfony\Component\HttpFoundation\Response;
         use App\Entity\Task;
@@ -30,7 +30,7 @@
 
 
 
-class AdminOrderEditController extends Controller
+class AdminOrderEditController extends AbstractController
             {
                 /**
                  * @Route("/orderEdit/{id}", name="orderEdit_find")

@@ -14,7 +14,7 @@ use App\Entity\Products;
 use App\Entity\Customers;
 
 use App\Entity\ProductType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -41,7 +41,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 
 
-class AdminProductsEditController extends Controller
+class AdminProductsEditController extends AbstractController
 {
     /**
      * @Route("/edit/{id}", name="product_editProduct")

@@ -15,7 +15,7 @@ use App\Entity\Users;
 use App\Entity\Customers;
 
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,7 +31,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 
 
-class AdminCustomerRemoveController extends Controller
+class AdminCustomerRemoveController extends AbstractController
 {
     /**
      * @Route("/CustomerDel/{id}", name="CustomerDel_deleteCustomer")

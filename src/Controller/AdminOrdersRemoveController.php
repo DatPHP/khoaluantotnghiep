@@ -6,7 +6,7 @@ namespace App\Controller;
 // ...
 use App\Entity\Orders;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -22,7 +22,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 
 
-class AdminOrdersRemoveController extends Controller
+class AdminOrdersRemoveController extends AbstractController
 {
         /**
         * @Route("/OrderDel/{id}", name="OrderDel_deleteOrder")

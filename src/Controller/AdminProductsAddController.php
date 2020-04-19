@@ -24,7 +24,7 @@ use App\Entity\Customers;
 
 use App\Entity\ProductType;
 use function PHPSTORM_META\type;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Task;
@@ -46,7 +46,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
 
 
 
-class AdminProductsAddController extends Controller
+class AdminProductsAddController extends AbstractController
 {
     /**
      * @Route("/add", name="product_addProduct")

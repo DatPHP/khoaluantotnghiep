@@ -14,7 +14,7 @@ namespace App\Controller;
 // ...
 use App\Entity\Products;
 use App\Entity\ProductType;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -27,6 +27,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Knp\Component\Pager\PaginatorInterface;
+
 
 
 
@@ -42,13 +44,13 @@ use App\Entity\Appointments;
 
 
 
-class ProductController extends Controller
+class ProductController extends AbstractController
 {
 
     /**
      * @Route("/product", name="product_products")
      */
-    public function products(Request $request)
+    public function products(Request $request,PaginatorInterface $paginator)
     {
 
         $repository = $this->getDoctrine()->getRepository(Products::class);
@@ -210,7 +212,11 @@ class ProductController extends Controller
         $allAppointmentsQuery = $appointmentsRepository->findAll();
 
         /* @var $paginator \Knp\Component\Pager\Paginator */
-        $paginator  = $this->get('knp_paginator');
+
+
+
+
+
 
         // Paginate the results of the query
         $appointments = $paginator->paginate(
@@ -225,16 +231,7 @@ class ProductController extends Controller
 
 
 
-            /*
 
-            for($i=1;$i<=5;$i++) {
-                $session = new Session();
-                $session->set('ot',$appointments [$i]);
-                $value = $session->get('ot');
-                var_dump($value);
-            }
-
-            */
 
             // xu ly dang nhap
 
